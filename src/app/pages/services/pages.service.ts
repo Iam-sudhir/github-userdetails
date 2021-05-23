@@ -7,8 +7,7 @@ import { Observable, observable } from 'rxjs';
 export class PagesService {
 
   constructor(private http: HttpClient) { }
-  getRepoData(): Observable<any>{
-  const url = ' https://api.github.com/users/johnpapa/repos?per_page=10&page=2';
-  return this.http.get<any>(url);
+  getRepoData(_pageQuery: any): Observable<any> {
+    return this.http.get<any>(_pageQuery);
   }
 }

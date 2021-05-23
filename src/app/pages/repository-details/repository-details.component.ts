@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PagesService } from '../services/pages.service'
+import { PagesService } from '../services/pages.service';
 @Component({
   selector: 'app-repository-details',
   templateUrl: './repository-details.component.html',
@@ -11,12 +11,18 @@ export class RepositoryDetailsComponent implements OnInit {
   constructor(private pageService: PagesService) { }
 
   ngOnInit(): void {
-    this.getUserRepository()
+    this.getUserRepository();
   }
   getUserRepository() {
-    this.pageService.getRepoData().subscribe((data) => {
-      console.log(data)
-      this.repositoryData = data;
-    })
+    const url = 'https://api.github.com/users/johnpapa/repos?per_page=10&page=' + this.page;
+    console.log(url);
+    this.pageService.getRepoData(url).subscribe((data) => {
+      this.repositoryData = Object.assign(data);
+      console.log(this.repositoryData)
+    });
+  }
+  loadPage(data: any) {
+    this.page = data;
+    this.getUserRepository();
   }
 }
