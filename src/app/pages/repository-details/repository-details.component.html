@@ -1,0 +1,26 @@
+<div class="row mt-5">
+  <div class="col-md-6" *ngFor="let repoData of repositoryData">
+    <div class="card repo-card ml-5 mr-5 mt-3">
+      <div class="card-body">
+        <h3>{{repoData.name}}</h3>
+        <span>
+          description
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-6">
+        <div class="card ml-5 mr-5">
+            <div class="card-body">
+                <h3>Main Header</h3>
+                <span>
+                    description
+                </span>
+            </div>
+        </div>
+    </div> -->
+  <!-- <div>
+    <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false"
+      [boundaryLinks]="true"></ngb-pagination>  
+  </div> -->
+</div>
