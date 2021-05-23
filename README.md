@@ -37,3 +37,6 @@ As per instruction used Ng bootstrap, Apart from this used normal bootstrap for 
 ## Functionlity
 This App contain GitHub User page with repository details fetched using `https://api.github.com/users/userame/repos` and displaying Repo name and description.
 
+## Extra
+Added `setTimeOut()` for displaying skeleton loader for 3secs after api call.
+
