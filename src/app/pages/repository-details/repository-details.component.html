@@ -2,18 +2,23 @@
   <div class="col-md-6" *ngFor="let repoData of repositoryData">
     <div class="card repo-card card-height ml-5 mr-5 mt-3">
       <div class="card-body">
-        <h3>{{repoData.name}}</h3>
-        <span>
-          {{repoData.description}}
-        </span>
-        <div class="row">
-          <span class="badge bg-primary">Primary</span>
+        <div class="col-md-12">
+            <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="50"></app-skeleton-loader>
+            <a *ngIf="loaded" href="repoData.html_url"><h3>{{repoData.name}}</h3></a>
+          <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="30"></app-skeleton-loader>
+          <span *ngIf="loaded">
+            {{repoData.description || 'Description Not Available'}}
+          </span>
+          <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="30"></app-skeleton-loader>
+          <div class="d-flex mt-2" *ngIf="loaded">
+            <span class="badge bg-primary">{{repoData.language}}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="mt-5 pagination-cls">
-    <ngb-pagination (pageChange)="loadPage($event)" [collectionSize]="100" [(page)]="page" [maxSize]="5"
-      [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+  <div class="mt-5 pagination-cls" *ngIf="repositoryData">
+    <ngb-pagination (pageChange)="loadPage($event)" [collectionSize]="100" [(page)]="page" [maxSize]="5" [rotate]="true"
+      [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
   </div>
 </div>

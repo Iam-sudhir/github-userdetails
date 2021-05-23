@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
+  loaded: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.loaded = true;
+    }, 3000);
   }
 
 }

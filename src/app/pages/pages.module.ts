@@ -6,12 +6,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PagesComponent} from './pages.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { RepositoryDetailsComponent } from './repository-details/repository-details.component';
+import {SharedModule} from '../shared/shared.module';
 @NgModule({
   declarations: [PagesComponent, UserDetailsComponent, RepositoryDetailsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    NgbModule
+    NgbModule,
+    SharedModule
   ],
   bootstrap: [RepositoryDetailsComponent]
 })

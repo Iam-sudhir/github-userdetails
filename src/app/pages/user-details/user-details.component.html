@@ -1,15 +1,20 @@
-<div class="card ml-5 mr-5">
+<div class="card ml-5 mr-5 profile-card">
+    <!-- <app-skeleton-loader Cwidth="270" Cheight="70"></app-skeleton-loader>
+    <app-skeleton-loader Cwidth="" Cheight="200px" circle="true"></app-skeleton-loader> -->
+
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">
-        <div>
+        <app-skeleton-loader *ngIf="!loaded" Cwidth="200" Cheight="200" circle="true"></app-skeleton-loader>
+        <div *ngIf="loaded">
           <img src="https://www.w3schools.com/howto/img_avatar.png" class="profile-img" alt="Avatar">
         </div>
       </div>
       <div class="col-md-10 ">
         <ul class="list-unstyled">
           <li>
-            <h2>John Deo</h2>
+            <app-skeleton-loader *ngIf="!loaded" Cwidth="300" Cheight="50"></app-skeleton-loader>
+            <h2 *ngIf="loaded">John Deo</h2>
           </li>
           <li>Code Eat Sleep and Repeat</li>
           <li><i class="fa fa-map-marker"></i> Bangalore, India</li>
