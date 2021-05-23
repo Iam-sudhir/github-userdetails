@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RepositoryDetailsComponent } from './repository-details.component';
 
 describe('RepositoryDetailsComponent', () => {
@@ -8,9 +8,12 @@ describe('RepositoryDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RepositoryDetailsComponent ]
+      declarations: [RepositoryDetailsComponent],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

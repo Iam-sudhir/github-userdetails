@@ -6,9 +6,9 @@
             <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="50"></app-skeleton-loader>
             <a *ngIf="loaded" href="repoData.html_url"><h3>{{repoData.name}}</h3></a>
           <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="30"></app-skeleton-loader>
-          <span *ngIf="loaded">
+          <p *ngIf="loaded" class="desc-style">
             {{repoData.description || 'Description Not Available'}}
-          </span>
+          </p>
           <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="30"></app-skeleton-loader>
           <div class="d-flex mt-2" *ngIf="loaded">
             <span class="badge bg-primary">{{repoData.language}}</span>

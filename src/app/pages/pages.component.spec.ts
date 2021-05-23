@@ -22,4 +22,16 @@ describe('PagesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it(`should have as title 'GITHUB-USER APP'`, () => {
+    fixture = TestBed.createComponent(PagesComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('GITHUB-USER APP');
+  });
+
+  it('should render title', () => {
+    fixture = TestBed.createComponent(PagesComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.toolbar span').textContent).toContain('GITHUB-USER APP');
+  });
 });

@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
   loaded: boolean = false;
-
+  public userDetails = {
+    userName : "John Papa",
+    bio : "Code Eat Sleep and Repeat",
+    twitter: "www.twitter.com/johndoe",
+    github: "https://github.com/john",
+    location: "Bangalore, India"
+  }
   constructor() { }
 
   ngOnInit(): void {

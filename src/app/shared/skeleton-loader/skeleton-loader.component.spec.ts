@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SkeletonLoaderComponent } from './skeleton-loader.component';
 
 describe('SkeletonLoaderComponent', () => {
@@ -8,7 +8,10 @@ describe('SkeletonLoaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkeletonLoaderComponent ]
+      declarations: [ SkeletonLoaderComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
   });

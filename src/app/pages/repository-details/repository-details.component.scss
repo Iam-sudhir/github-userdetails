@@ -8,11 +8,17 @@
 .card-height {
     height: 150px;
 }
-.pagination-cls{
+.pagination-cls {
     margin-left: auto;
     margin-right: auto;
 }
-.card:hover{ 
+.card:hover {
     box-shadow: 1px 8px 20px grey;
-   -webkit-transition:  box-shadow .6s ease-in;
- }
+    -webkit-transition: box-shadow 0.6s ease-in;
+}
+.desc-style {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

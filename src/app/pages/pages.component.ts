@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PagesComponent implements OnInit {
 
   constructor() { }
-
+  title = 'GITHUB-USER APP';
   ngOnInit(): void {
   }
 
