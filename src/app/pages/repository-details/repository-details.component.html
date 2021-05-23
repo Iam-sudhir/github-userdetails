@@ -4,7 +4,7 @@
       <div class="card-body">
         <div class="col-md-12">
             <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="50"></app-skeleton-loader>
-            <a *ngIf="loaded" href="repoData.html_url"><h3>{{repoData.name}}</h3></a>
+            <a *ngIf="loaded" href="{{repoData.html_url}}" target="_blank"><h3>{{repoData.name}}</h3></a>
           <app-skeleton-loader *ngIf="!loaded" Cwidth="450" Cheight="30"></app-skeleton-loader>
           <p *ngIf="loaded" class="desc-style">
             {{repoData.description || 'Description Not Available'}}
